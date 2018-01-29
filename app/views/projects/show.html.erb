@@ -1,0 +1,12 @@
+<h1>Show Project</h1>
+<% @project = Project.find(params[:id]) %>
+<p>
+  <strong>Project:</strong>
+  <%= @project.name %>
+</p>
+<% for task in @project.tasks %>
+  <p>
+    <strong>Task:</strong>
+    <%= task.name %>
+  </p>
+<% end %>
